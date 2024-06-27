@@ -69,8 +69,12 @@
         <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
           <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_laravel_host">Host Backend in Server</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_firebase">Firebase Setup</a></li>
           </ul>
         </li>
+
+        
       </ul>
     </div>
     
@@ -136,6 +140,138 @@
             <li>Use the <code>http</code> package to make API requests to your Laravel backend from your Flutter app.</li>
           </ol>
         </section>
+
+        <!-- Host Laravel
+		============================ -->
+
+        <section id="idocs_laravel_host">
+          <h2>Host The backend File in server</h2>
+          <p class="lead">Follow the steps below to set up your project:</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/A2vYZxhLOD8?si=SLpdjcPPEX94Krz7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         
+              <pre><code class="yaml">
+                DB_CONNECTION=mysql
+                DB_HOST=127.0.0.1
+                DB_PORT=3306
+                DB_DATABASE=Your_Database_Name
+                DB_USERNAME=Database_user_name
+                DB_PASSWORD=Password
+              </code></pre>
+            </li>
+          </ol>
+          <h2>Database Permission</h2>
+          <p class="lead">Follow the step to give database Permission</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/b5_ugRz5Cvk?si=nTI2jSfxw3qRb16w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <hr class="divider">
+
+                <!-- firebase setup
+		============================ -->
+    <section id="idocs_firebase">
+      <h2>Firebase Setup</h2>
+      <p class="lead">Follow the steps below to set up your project:</p>
+      <h3>Create a new project in Firebase</h3>
+<!-- Step 1: Sign in to Firebase Console -->
+<p>Follow these steps to create a new project in Firebase:</p>
+<ol>
+  <li>Go to the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a> and sign in with your Google account.</li>
+  <li>Click on the "Add project" button (if you don't have any existing projects) or select an existing project to add Firebase to it.</li>
+  <li>Enter a project name and optionally customize the project ID.</li>
+  <li>Click "Continue" and follow any additional prompts to create your Firebase project.</li>
+</ol>
+
+
+<!-- Step 3: Learn more with a tutorial -->
+<p>If you're new to Firebase, watch this tutorial to get started:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CuQFcbcFL7o?si=0Q3oKcFzOaC784hK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>This tutorial covers the basics of creating a project in Firebase and integrating Firebase services into your applications.</p>
+
+<!-- Related information -->
+<h4>Related information:</h4>
+<p>For more detailed guidance and advanced features:</p>
+<ul>
+  <li>Explore Firebase documentation and guides at <a href="https://firebase.google.com/docs" target="_blank">Firebase Docs</a>.</li>
+  <li>Join the Firebase community on <a href="https://firebase.google.com/community" target="_blank">Firebase Community</a> for support and discussions.</li>
+  <li>Discover Firebase products and features on <a href="https://firebase.google.com/products" target="_blank">Firebase Products</a>.</li>
+  <li>Follow Firebase updates and announcements on <a href="https://twitter.com/firebase" target="_blank">Firebase Twitter</a>.</li>
+</ul>
+
+<!-- Additional details -->
+<p>Feel free to add more Firebase services and configurations based on your project requirements.</p>
+
+      <!-- create project in flutter -->
+      <h3>Create a new app in Firebase</h3>
+      <p>Follow these steps to create a new app in Firebase and integrate it into your Flutter project for Android and iOS:</p>
+      
+      <!-- Step 1: Create a new Firebase project -->
+      <ol>
+        <li>Go to the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a> and sign in with your Google account.</li>
+        <li>Create a new Firebase project or select an existing one.</li>
+        <li>Click on "<code>Add app</code>" to add a new app to your Firebase project.</li>
+        <li>Choose the platform (Android or iOS).</li>
+        <li>Follow the steps to register your app with Firebase.</li>
+      </ol>
+      
+      <!-- Step 2: Download necessary files -->
+      <p>Download the necessary configuration files for both Android and iOS:</p>
+      <ul>
+        <li>For Android:
+          <ol>
+            <li>Download the <code>google-services.json</code> file.</li>
+            <li>Place the <code>google-services.json</code> file in the <code>android/app</code> directory of your Flutter project.</li>
+          </ol>
+        </li>
+        <li>For iOS:
+          <ol>
+            <li>Download the <code>GoogleService-Info.plist</code> file.</li>
+            <li>Open your Flutter project in Xcode.</li>
+            <li>Drag and drop the <code>GoogleService-Info.plist</code> file into the <code>Runner/Runner</code> directory in Xcode.</li>
+          </ol>
+        </li>
+      </ul>
+    
+      
+      <!-- Step 4: Learn more with a tutorial -->
+      <p>A Quick demo</p>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/cgy1IDRQRi0?si=MY7IVzmkWTaNUM47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+      
+
+      <h3>Firebase generate new private key</h3>
+      <p>Follow these steps to generate a new private key in Firebase and update your backend Laravel project:</p>
+      
+      <!-- Step 1: Generate new private key in Firebase -->
+      <ol>
+        <li>Go to the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a> and sign in with your Google account.</li>
+        <li>Navigate to the "Project settings" by clicking on the gear icon next to your project name.</li>
+        <li>In the "Service accounts" tab, click on "<code>Generate new private key</code>".</li>
+        <li>Confirm the action and download the generated private key file.</li>
+      </ol>
+      
+      <!-- Step 2: Learn more with a tutorial -->
+      <p>If you need a detailed tutorial on generating a new private key in Firebase, watch this video:</p>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LCMzCwb38Ug?si=Tvmycvrk6k4WDGaZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
+      <!-- Step 3: Update your Laravel project -->
+      <p>Download the key and update your backend Laravel project:</p>
+      <ol>
+        <li>Locate the existing <code>public/google-services.json</code> file in your Laravel project.</li>
+        <li>Replace the contents of the <code>public/google-services.json</code> file with the new data from the generated private key file.</li>
+      </ol>
+      
+      <!-- Additional details -->
+      <p>Make sure to securely store the new private key and update any configurations that rely on it.</p>
+      
+
+        </li>
+      </ol>
+    </section>
+
+       
         
 		<hr class="divider">  
       </div>
