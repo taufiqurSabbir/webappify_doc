@@ -71,6 +71,7 @@
             <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_laravel_host">Host Backend in Server</a></li>
             <li class="nav-item"><a class="nav-link" href="#idocs_firebase">Firebase Setup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_appurl">App base Url</a></li>
           </ul>
         </li>
 
@@ -99,8 +100,8 @@
 			</div>
 			<div class="col-sm-6 col-lg-4">
 				<ul class="list-unstyled">
-					<li><strong class="font-weight-700">Created:</strong> 8 April, 2020</li>
-					<li><strong>Update:</strong> 12 May, 2020</li>
+					<li><strong class="font-weight-700">Created:</strong> 1 July, 2024</li>
+					<li><strong>Update:</strong> 1 July, 2024</li>
 				</ul>
 			</div>
 		</div>
@@ -129,15 +130,8 @@
             <li>Create a new Laravel project by running <code>laravel new project_name</code>.</li>
             <li>Navigate to the project directory <code>cd project_name</code> and run <code>php artisan serve</code> to start the local development server.</li>
           </ol>
-          <h3>Integrating Flutter with Laravel</h3>
-          <ol>
-            <li>Set up API routes in Laravel to handle backend logic. Define routes in <code>routes/api.php</code> and create controllers as needed.</li>
-            <li>In your Flutter project, add the <code>http</code> package to your <code>pubspec.yaml</code> file to handle API requests:
-              <pre><code class="yaml">dependencies:
-  http: ^0.13.3</code></pre>
             </li>
             <li>Run <code>flutter pub get</code> to install the package.</li>
-            <li>Use the <code>http</code> package to make API requests to your Laravel backend from your Flutter app.</li>
           </ol>
         </section>
 
@@ -269,11 +263,39 @@
 
         </li>
       </ol>
-    </section>
-
-       
-        
+    </section>   
 		<hr class="divider">  
+
+                    <!-- base url
+		============================ -->
+    <section id="idocs_appurl">
+      <h2>Base URL Change</h2>
+      <p class="lead">Change the base URL to replace it with your own URL where you host the Laravel backend.</p>
+
+      <pre><code>Make sure you did it for both App<code></pre>
+      <br>
+    
+      <p>To change the base URL, replace the URL in the following file path:</p>
+      <pre><code>lib/data/utils/urls.dart</code></pre>
+    
+      <p>Example code snippet from <code>urls.dart</code>:</p>
+      <pre><code class="dart">
+    class Urls {
+      static const String baseUrl = "http://yourdomain.com/api";
+      // Add other endpoints here
+      static const String login = "$baseUrl/login";
+      static const String register = "$baseUrl/register";
+    }
+      </code></pre>
+    
+      <p>Replace <code>http://yourdomain.com/api</code> with your own base URL.</p>
+    
+      <img src="assets/images/Screenshot_1.png" alt="Screenshot of URL configuration in urls.dart">
+    </section>
+    
+
+		<hr class="divider">  
+
       </div>
     </div>
     <!-- Docs Content end --> 
